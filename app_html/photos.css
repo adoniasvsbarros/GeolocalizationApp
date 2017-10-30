@@ -1,0 +1,72 @@
+body, html { 
+   height:100%; 
+   width: 100%; 
+   margin: 0;
+   z-index:1;
+}
+
+ #title{
+   text-align: center;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   text-align: center;
+   font-size: 50px;
+   color: white;
+ }
+
+#slideshow{
+   height:100%;
+   width:100%;
+   position:relative;
+
+}
+
+#desc {
+ float: left;
+ margin: -60px 0 10px 0px;
+ width: 14em;
+}
+
+ h2, h3 {
+  margin: 0;
+ }
+
+ #desc {
+  margin: 0 14px;
+ }
+
+ #buttondiv{
+  position: static;
+ }
+
+#menu{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: white;
+	text-align: center;
+}
+
+#containCarousel{
+   height:100%;
+   width: 100%;
+}
+
+#slideshow{
+   height:100%; 
+   width: 100%;
+}
+.carousel {
+  width:70%;
+  height:70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:auto;
+  margin-bottom: auto;
+}
+
+li{
+    list-style-type:none;
+    margin-right:10px;
+    margin-bottom:10px;
+    float:left;
+}

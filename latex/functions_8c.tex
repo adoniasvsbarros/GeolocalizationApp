@@ -1,0 +1,141 @@
+\hypertarget{functions_8c}{}\section{functions.\+c File Reference}
+\label{functions_8c}\index{functions.\+c@{functions.\+c}}
+
+
+file with implementation of functions described in \hyperlink{functions_8h}{functions.\+h} header file  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$libexif/exif-\/data.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structposition}{position}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{functions_8c_a70ed59adcb4159ac551058053e649640}\label{functions_8c_a70ed59adcb4159ac551058053e649640}} 
+\#define {\bfseries S\+I\+ZE}~100
+\item 
+\mbox{\Hypertarget{functions_8c_a82a91d4c15d9710daf8c71adc51ffc91}\label{functions_8c_a82a91d4c15d9710daf8c71adc51ffc91}} 
+\#define {\bfseries C\+O\+M\+M\+A\+N\+D\+L\+I\+N\+E\+S\+I\+ZE}~1000
+\item 
+\mbox{\Hypertarget{functions_8c_a3a2b253bc5d2d692d074c5c8e1fbfa39}\label{functions_8c_a3a2b253bc5d2d692d074c5c8e1fbfa39}} 
+\#define {\bfseries M\+A\+X\+N\+U\+M\+B\+I\+M\+A\+G\+ES}~9999
+\item 
+\mbox{\Hypertarget{functions_8c_a624fd5af921a5266e2d0304a645298ba}\label{functions_8c_a624fd5af921a5266e2d0304a645298ba}} 
+\#define {\bfseries B\+U\+FF}~1000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{functions_8c_aa24c7367dfa00012e7ab5fe4edb495ae}{printmarkplaceinicial} ()
+\item 
+int \hyperlink{functions_8c_a6ff40e928b128083eba19a80dc02d9ee}{printmarkplace} (char $\ast$positionname, double positionlongitude, double positionlatitude)
+\item 
+int \hyperlink{functions_8c_a2ae52d5d46395d565a9817df8f3bda1c}{printmarkplacefinal} ()
+\item 
+void \hyperlink{functions_8c_a4e947d860d2a21def3bdb70338458baa}{printinformationapp} ()
+\item 
+double \hyperlink{functions_8c_a303685b07e3009a45c8139da6ca8a593}{convert\+G\+P\+Scoord} (char $\ast$buf)
+\item 
+\hyperlink{structstruct}{struct} \hyperlink{structposition}{position} \hyperlink{functions_8c_a36356f0529bf83e6619882230a73244e}{gen\+Location} (char $\ast$file)
+\item 
+void \hyperlink{functions_8c_ae81ec012305a612d18f76a1958db3d0b}{add\+Exif} (char $\ast$file)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+file with implementation of functions described in \hyperlink{functions_8h}{functions.\+h} header file 
+
+\begin{DoxyAuthor}{Author}
+Adonias Vicente da Silva Barros, Enzo Belloto Furlan 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19 june 2017
+\end{DoxyDate}
+file with implementation of functions described in \hyperlink{functions_8h}{functions.\+h} header file 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{functions_8c_ae81ec012305a612d18f76a1958db3d0b}\label{functions_8c_ae81ec012305a612d18f76a1958db3d0b}} 
+\index{functions.\+c@{functions.\+c}!add\+Exif@{add\+Exif}}
+\index{add\+Exif@{add\+Exif}!functions.\+c@{functions.\+c}}
+\subsubsection{\texorpdfstring{add\+Exif()}{addExif()}}
+{\footnotesize\ttfamily void add\+Exif (\begin{DoxyParamCaption}\item[{char $\ast$}]{file }\end{DoxyParamCaption})}
+
+Add exif information in the image which has no exif information 
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8c_a303685b07e3009a45c8139da6ca8a593}\label{functions_8c_a303685b07e3009a45c8139da6ca8a593}} 
+\index{functions.\+c@{functions.\+c}!convert\+G\+P\+Scoord@{convert\+G\+P\+Scoord}}
+\index{convert\+G\+P\+Scoord@{convert\+G\+P\+Scoord}!functions.\+c@{functions.\+c}}
+\subsubsection{\texorpdfstring{convert\+G\+P\+Scoord()}{convertGPScoord()}}
+{\footnotesize\ttfamily double convert\+G\+P\+Scoord (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf }\end{DoxyParamCaption})}
+
+Convert G\+PS format hours,minutes and seconds to coordinate structure 
+\begin{DoxyParams}{Parameters}
+{\em buf} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+coordinate value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a36356f0529bf83e6619882230a73244e}\label{functions_8c_a36356f0529bf83e6619882230a73244e}} 
+\index{functions.\+c@{functions.\+c}!gen\+Location@{gen\+Location}}
+\index{gen\+Location@{gen\+Location}!functions.\+c@{functions.\+c}}
+\subsubsection{\texorpdfstring{gen\+Location()}{genLocation()}}
+{\footnotesize\ttfamily \hyperlink{structstruct}{struct} \hyperlink{structposition}{position} gen\+Location (\begin{DoxyParamCaption}\item[{char $\ast$}]{file }\end{DoxyParamCaption})}
+
+Print informations about the app in an exif.\+txt 
+\begin{DoxyParams}{Parameters}
+{\em .\+jpg} & file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct position from the photo given in file with values of latitude, longitude, name and initialization 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a4e947d860d2a21def3bdb70338458baa}\label{functions_8c_a4e947d860d2a21def3bdb70338458baa}} 
+\index{functions.\+c@{functions.\+c}!printinformationapp@{printinformationapp}}
+\index{printinformationapp@{printinformationapp}!functions.\+c@{functions.\+c}}
+\subsubsection{\texorpdfstring{printinformationapp()}{printinformationapp()}}
+{\footnotesize\ttfamily void printinformationapp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print general informations about the app \mbox{\Hypertarget{functions_8c_a6ff40e928b128083eba19a80dc02d9ee}\label{functions_8c_a6ff40e928b128083eba19a80dc02d9ee}} 
+\index{functions.\+c@{functions.\+c}!printmarkplace@{printmarkplace}}
+\index{printmarkplace@{printmarkplace}!functions.\+c@{functions.\+c}}
+\subsubsection{\texorpdfstring{printmarkplace()}{printmarkplace()}}
+{\footnotesize\ttfamily int printmarkplace (\begin{DoxyParamCaption}\item[{char $\ast$}]{positionname,  }\item[{double}]{positionlongitude,  }\item[{double}]{positionlatitude }\end{DoxyParamCaption})}
+
+Create the K\+ML body file with latitude and longitude photo information 
+\begin{DoxyParams}{Parameters}
+{\em positionname} & \\
+\hline
+{\em positionlongitude} & \\
+\hline
+{\em positionlatitude} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the info.\+kml file was created and -\/1 in error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a2ae52d5d46395d565a9817df8f3bda1c}\label{functions_8c_a2ae52d5d46395d565a9817df8f3bda1c}} 
+\index{functions.\+c@{functions.\+c}!printmarkplacefinal@{printmarkplacefinal}}
+\index{printmarkplacefinal@{printmarkplacefinal}!functions.\+c@{functions.\+c}}
+\subsubsection{\texorpdfstring{printmarkplacefinal()}{printmarkplacefinal()}}
+{\footnotesize\ttfamily int printmarkplacefinal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print the last part of a markplace \mbox{\Hypertarget{functions_8c_aa24c7367dfa00012e7ab5fe4edb495ae}\label{functions_8c_aa24c7367dfa00012e7ab5fe4edb495ae}} 
+\index{functions.\+c@{functions.\+c}!printmarkplaceinicial@{printmarkplaceinicial}}
+\index{printmarkplaceinicial@{printmarkplaceinicial}!functions.\+c@{functions.\+c}}
+\subsubsection{\texorpdfstring{printmarkplaceinicial()}{printmarkplaceinicial()}}
+{\footnotesize\ttfamily int printmarkplaceinicial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create the K\+ML header part of the file 

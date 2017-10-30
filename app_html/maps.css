@@ -1,0 +1,55 @@
+body, html { 
+   height:100%; 
+   width: 100%; 
+   margin: 0;
+}
+
+ #title{
+   text-align: center;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   text-align: center;
+   font-size: 50px;
+   color: white;
+ }
+ 
+#mapsContainer{
+   height:100%; 
+   width: 100%;
+}
+
+#map {
+   margin: 0;
+   width: 70%;
+   height: 70%;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 5%;
+   
+   float:left;
+}
+
+#desc {
+ float: left;
+ margin: -60px 0 10px 0px;
+ width: 14em;
+}
+
+ h2, h3 {
+  margin: 0;
+ }
+
+ #desc {
+  margin: 0 14px;
+ }
+
+ #buttondiv{
+  position: static;
+ }
+
+#menu{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: white;
+	text-align: center;
+}

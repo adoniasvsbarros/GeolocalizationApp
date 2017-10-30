@@ -1,0 +1,105 @@
+Geolocalization\+App -\/ Creating .kmz files(markplace) capable of locate images in maps 
+
+\subsubsection*{TO U\+S\+E\+RS\+:}
+
+\subsection*{What is the objective?}
+
+Locate any photo you took in the world and locate where you took them. Basically, you have a program capable of receiving any directory containing pictures taken by any device or camera and if these photos have information about their location we will find it for you and create a .kmz file with the location of this photos. The .kmz file is widely supported in maps. You can add this file to any map and then see the location of your photos.
+
+\subsection*{How to get the program to work？}
+
+\subsection*{System requirements}
+
+E\+X\+IF tool
+
+Image\+Magick
+
+Libexif library
+
+
+\begin{DoxyEnumerate}
+\item In order to install the library get into the libexif-\/0.\+6.\+21 directory and click install. 
+\item A .txt file will be opened with all the instructions of installation 
+\item Briefly, type these shell commands to configure `./configure; make; make install\textquotesingle{}, build, and install this package. 
+\end{DoxyEnumerate}
+
+\subsection*{Instructions}
+
+
+\begin{DoxyEnumerate}
+\item After downloading the Geolocalization\+App open a terminal (ctrl+alt+t) 
+\item Access the main directory of the app 
+\item Type in the terminal the command\+: \char`\"{}gcc main.\+c functions.\+h -\/o main -\/lexif\char`\"{} to compile the program 
+\item In order to execute the program you must be inside the main directory and type ./main $<$name\+\_\+of\+\_\+directory$>$ renaming $<$name\+\_\+of\+\_\+directory$>$ for the absolut path of the directory of your photos and them execute 
+\item An info.\+kmz file will be generated inside the main directory of the program, inside this file there is a folder with the compressed images and a .kml file with the information about your photos. A folder kmzphotos with a .kml and a folder with compressed photos will be also generated. 
+\item With the file kmzphotos.\+kmz file you will be able to go to any maps that support the .kmz and insert this file in order to see the location of the photos you took 
+\item A photos file (photos) is given as example inside the main directory 
+\end{DoxyEnumerate}
+
+\subsection*{How to show your kmz in a layer inside the application H\+T\+ML}
+
+
+\begin{DoxyEnumerate}
+\item After generating the K\+MZ file you must put it in a web server in order to get a public U\+RL with this file 
+\item Go to app\+\_\+html/maps.\+js and inside the file go to var kml = \{ ...　\} 
+\item Add inside the var kml ,\{\char`\"{}\+X\char`\"{} \+: \{ name\+: \char`\"{}\+Layer N\char`\"{}, url\+:\char`\"{} your U\+R\+L \char`\"{} \}, ~\newline
+for example\+: if inside the var kml you have\+: ~\newline
+var kml = \{ ~\newline
+a\+: \{ name\+: \char`\"{}\+Layer 1\char`\"{}, url\+:\char`\"{}https\+://sites.\+google.\+com/site/gpsphotoapp/files/kmzphotos.\+kmz?attredirects=0\&d=1\char`\"{} \} \}~\newline
+, \char`\"{}\+X\char`\"{} should be b and \char`\"{}\+N\char`\"{} should be 2, ~\newline
+so var kml = \{ ~\newline
+a\+: \{ name\+: \char`\"{}\+Layer 1\char`\"{}, url\+:\char`\"{}https\+://sites.\+google.\+com/site/gpsphotoapp/files/kmzphotos.\+kmz?attredirects=0\&d=1\char`\"{} \}, ~\newline
+b\+: \{ name\+: \char`\"{}\+Layer 2\char`\"{}, url\+:\char`\"{}https\+://sites.\+google.\+com/site/gpsphotoapp/files/example.\+kmz?attredirects=0\&d=1\char`\"{} \} \};  
+\item A new layer called \char`\"{}\+Layer N\char`\"{} will be displayed in the html and you will be able to see it if you check the box 
+\end{DoxyEnumerate}
+
+\subsection*{How to open the application H\+T\+ML}
+
+
+\begin{DoxyEnumerate}
+\item Go to app\+\_\+html/index.\+html 
+\end{DoxyEnumerate}
+
+\subsection*{How to show this documentation}
+
+
+\begin{DoxyEnumerate}
+\item Go to html/index.\+html 
+\end{DoxyEnumerate}
+
+\subsection*{How to add images in the gallery}
+
+
+\begin{DoxyEnumerate}
+\item Go to html/photos.\+html 
+\item Add your image in the file photos 
+\item Inside the div id=\char`\"{}insidecarousel\char`\"{} add a new div with the following informations~\newline
+ div class=\char`\"{}item active\char`\"{}~\newline
+$<$img src=\char`\"{}photos/\char`\"{}your\+Photo\+Name\char`\"{}.\+jpg\char`\"{} alt=\char`\"{} \char`\"{}N\char`\"{}\+Slide\char`\"{}$>$ where \char`\"{}your\+Photo\+Name\char`\"{} and \char`\"{}\+N\char`\"{} are your photo name and a different name to your slide  
+\end{DoxyEnumerate}
+
+\subsection*{List of possible E\+R\+R\+OR messages\+:}
+
+
+\begin{DoxyEnumerate}
+\item E\+R\+R\+OR 1\+: File has no latitude tag 
+\item E\+R\+R\+OR 2\+: File has no longitude tag 
+\item E\+R\+R\+OR 3\+: struct images\mbox{[}d\mbox{]} not initialized 
+\item E\+R\+R\+OR 4\+: Cannot open Input directory 
+\item E\+X\+IT\+: No file was provided 
+\end{DoxyEnumerate}
+
+\subsection*{Important Links\+:}
+
+
+\begin{DoxyEnumerate}
+\item \href{https://developers.google.com/kml/documentation/}{\tt K\+M\+L\+Documentation} 
+\item \href{https://www.geoportail.gouv.fr/carte}{\tt geoportal} 
+\item \href{http://www.stack.nl/~dimitri/doxygen/manual/index.html}{\tt doxygem} 
+\item \href{http://libexif.sourceforge.net/api/}{\tt libexif} 
+\item \href{https://www.openstreetmap.org/}{\tt Open\+Street\+Map} 
+\item \href{http://www.sno.phy.queensu.ca/~phil/exiftool/}{\tt E\+X\+I\+Ftool} 
+\item \href{https://www.imagemagick.org/script/index.php}{\tt Image\+Magick}
+
+
+\end{DoxyEnumerate}
